@@ -56,6 +56,17 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+% For lists in projects section
+\newcommand{\resumeSubheadingPro}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+
 \newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
@@ -111,8 +122,6 @@
           {Made a library and a CLI interface to interconvert different distortion types present in different astronomical datasets providing uniformity when different software are used in an analysis pipeline.}
         \resumeItem{}
           {Working on a library to match astronomical images within large cataloge by using reverse index method. The library is highly modular than existing software and is written entirely in C making it highly scalable and efficient.}
-	\resumeItem{}
-	  {Simultaneously working on a library to register the images within a single system making it easier to find, compare and integrate the data obtained from different measurements and surveys.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -130,8 +139,28 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
+    \resumeSubheadingPro
+    {\href{https://limitless-journey-50511.herokuapp.com/}{Book Reviewer}}{}
+    {\href{https://github.com/sachinkumarsingh092/book-reviewer}{https://github.com/sachinkumarsingh092/book-reviewer}}
+	\resumeItemListStart
+	  \resumeItem{}
+	    {Book reviewing web application allowing users to register themselves and rate and review books from a large cataloge of books.}
+	  \resumeItem{}
+	    {Built with Flask, jinja2 templating, bootstrap CSS, PostgreSQL, goodreads developer-API and hosted on Heroku.}
+	\resumeItemListEnd
+
+    \resumeSubheadingPro
+    {\href{https://otaku-chat.herokuapp.com/}{Otaku-chat}}{}
+    {\href{https://github.com/sachinkumarsingh092/Otaku-chat}{https://github.com/sachinkumarsingh092/Otaku-chat}}
+	\resumeItemListStart
+	  \resumeItem{}
+	    {A realtime chatting web application providing multipe rooms to chat inspired by slack.}
+	  \resumeItem{}
+	    {Features include creating and joining multiple channels, saved sessions even after closing the browser, deleting sent messages and more.}
+	  \resumeItem{}
+	    {Built with Flask, Javascript, FlaskSocketIO, jinja2 templating, bootstrap5 CSS, PostgreSQ and hosted on Heroku.}
+	\resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 
@@ -144,7 +173,20 @@
 	{Won $1^{st}$ runner-up prize for building a website to be used by an educational organisation, where the same website can be used by students, teacher and administrator to organise their individual programs.}
    \resumeSubItem{NIT-H CTF}\\  
 	\vspace{9pt}
-	{Won $2^{nd}$ runner-up prize in CTF conducted by cybersecurity club of NIT-Hameerpur.}
+	{Won $2^{nd}$ runner-up prize in Capture The Flag(CTF) conducted by cybersecurity club of NIT-Hameerpur.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: C/C++, Python, Javascript, SQL, Shell scripting, Java, HTML, CSS}}
+    \item{
+      \textbf{Technologies}{: GNU/Linux, Git, Heroku}}
+    \item{
+      \textbf{Frameworks}{: Flask}}
+  
   \resumeSubHeadingListEnd
 
 
@@ -162,16 +204,7 @@
   \resumeSubHeadingListEnd
 
 
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
+
 
 
 %-------------------------------------------
