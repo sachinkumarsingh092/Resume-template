@@ -2,7 +2,7 @@
 % Resume in Latex
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -49,7 +49,7 @@
 }
 
 \newcommand{\resumeSubheading}[5]{
-  \vspace{-1pt}\item
+  \vspace{4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -59,7 +59,7 @@
 
 % For lists in projects section
 \newcommand{\resumeSubheadingPro}[2]{
-  \vspace{-1pt}\item
+  \vspace{4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 	\textbf{#1} (\textit{\small#2}) \\
     \end{tabular*}\vspace{-5pt}
@@ -67,7 +67,7 @@
 
 % For lists in education section
 \newcommand{\resumeSubheadingEdu}[4]{
-  \vspace{-1pt}\item
+  \vspace{4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -123,13 +123,15 @@
 
     \resumeSubheading
       {Google Summer of Code'20}{\href{https://www.gnu.org}{The GNU project}}
-      {Student Developer at GNU-Astro} {May 2020 – August 2020 (ongoing)}
+      {Student Developer at GNU-Astro} {May 2020 – August 2020}
       {\href{https://summerofcode.withgoogle.com/projects/\#4950581673721856}{\color{MidnightBlue}https://summerofcode.withgoogle.com/projects/\#4950581673721856}}
       \resumeItemListStart
         \resumeItem{}
-          {Made a library and a CLI interface to inter-convert different distortion types present in different astronomical datasets providing uniformity when different software are used in an analysis pipeline.}
+          {Implemented a library and a CLI interface to inter-convert different distortion types present in different astronomical datasets providing uniformity when different software are used in an analysis pipeline.}
         \resumeItem{}
-          {Working on a library to match and align astronomical images within large catalogue. The library is highly modular than existing software and is written entirely in C making it highly scalable and efficient.}
+          {Implemented a RAM efficient index-based k-d tree for easy preprocessing of large astronomical datasets before matching.}
+	\resumeItem{}
+	  {Implemented a multi-threaded matching algorithm to match objects (stars and galaxies) in a query dataset to a reference dataset.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -147,33 +149,36 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+
     \resumeSubheadingPro
     {\href{https://limitless-journey-50511.herokuapp.com/}{Book Reviewer}}{\href{https://github.com/sachinkumarsingh092/book-reviewer}{\color{MidnightBlue}https://github.com/sachinkumarsingh092/book-reviewer}}
 	\resumeItemListStart
 	  \resumeItem{}
 	    {Book reviewing web application allowing users to register themselves and rate and review books from a large catalogue of books.}
 	  \resumeItem{}
-	    {Built with Flask, jinja2 templating, Bootstrap CSS, PostgreSQL, goodreads developer-API and hosted on Heroku.}
+	    {Built using Flask, jinja2 templating, Bootstrap CSS, PostgreSQL, goodreads developer-API and hosted on Heroku.}
 	\resumeItemListEnd
 
     \resumeSubheadingPro
     {\href{https://otaku-chat.herokuapp.com/}{Otaku-chat}}{\href{https://github.com/sachinkumarsingh092/Otaku-chat}{\color{MidnightBlue}https://github.com/sachinkumarsingh092/Otaku-chat}}
 	\resumeItemListStart
 	  \resumeItem{}
-	    {A realtime chatting web application providing multiple rooms to chat inspired by slack.}
+	    {A realtime chatting web application with multiple chat room functionality.}
 	  \resumeItem{}
-	    {Features include creating and joining multiple channels, saved sessions even after closing the browser, deleting sent messages and more.}
+	    {Features include creating and joining multiple channels, saved sessions after closing the browser and deleting sent messages.}
 	  \resumeItem{}
-	    {Built with Flask, Javascript, FlaskSocketIO, jinja2 templating, Bootstrap CSS, PostgreSQL and hosted on Heroku.}
+	    {Built using Flask, Javascript, FlaskSocketIO, jinja2 templating, Bootstrap CSS, PostgreSQL and hosted on Heroku.}
 	\resumeItemListEnd
 
     \resumeSubheadingPro
     {\href{https://github.com/sachinkumarsingh092/bitmap-filter}{Bitmap Filters}}{\href{https://github.com/sachinkumarsingh092/bitmap-filter}{\color{MidnightBlue}https://github.com/sachinkumarsingh092/bitmap-filter}}
 	\resumeItemListStart
 	  \resumeItem{}
-	    {A fast and efficient bitmap filter to convert uncompressed bitmap images, written entirely in C.}
+	    {A fast and efficient bitmap filter to convert uncompressed bitmap images.}
 	  \resumeItem{}
-	    {Current filters include grayscaling, blurring, reflecting the image and detecting its edges.}
+	    {Current conversion filters include grayscaling, blurring, reflecting and detecting the edges of the image.}
+	  \resumeItem{}
+	    {Built using C and GNU Make.}
 	\resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -182,6 +187,8 @@
 
 %---------ACHIEVEMENTS----------------
 \section{Achievements}
+ % Use vspace to introduce vertical fixed-length spaces.
+ \vspace{4pt} 
   \resumeSubHeadingListStart
     \resumeSubItem{Paytm Build for India Hackathon}\\  
 	\vspace{9pt}
@@ -194,11 +201,12 @@
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
+ \vspace{4pt}
     \begin{itemize}[leftmargin=*]
     % To change space between list items, change the value of \itemsep
     \setlength{\itemsep}{0pt}
     \item{
-      \textbf{Languages}{: C/C++, Python, Javascript, SQL, Shell scripting, Java, HTML, CSS}}
+      \textbf{Languages}{: C/C++, Python, Javascript, SQL, Shell scripting, Java, HTML, CSS, \LaTeX}}
     \item{
       \textbf{Technologies}{: GNU/Linux, Git, Heroku}}
     \item{
